@@ -99,8 +99,8 @@ def hello() -> str:
     body = []
     x, y, line_height = 80, 18, 12
     for index, line in enumerate(lines):
-        delay = 0.12 + index * 0.12
-        clip, cursor = wipe(f"hello-{index}", x, y + index * line_height, len(line) * 7.2, line_height, delay, 0.45)
+        delay = 0.24 + index * 0.24
+        clip, cursor = wipe(f"hello-{index}", x, y + index * line_height, len(line) * 7.2, line_height, delay, 0.90)
         body.append(clip)
         body.append(f'<text x="{x}" y="{y + index * line_height + 9}" class="ink" font-size="12" xml:space="preserve" clip-path="url(#hello-{index})">{line}</text>')
         body.append(cursor)
@@ -145,12 +145,12 @@ def draw_stats(calendar: dict) -> str:
         y = 128 - count / high * 38
         points.append(f"{x:.1f},{y:.1f}")
     active = sum(day["contributionCount"] > 0 for week in weeks for day in week["contributionDays"])
-    chart_clip, chart_cursor = wipe("contributions-chart", 0, 84, WIDTH, 46, 0.42, 1.25)
+    chart_clip, chart_cursor = wipe("contributions-chart", 0, 84, WIDTH, 46, 0.84, 2.50)
     return svg(WIDTH, 148, f"""
 <g opacity="0"><text x="0" y="52" class="ink" font-size="48" font-weight="700">{calendar["totalContributions"]}</text>
-<text x="0" y="73" class="muted" font-size="12">contributions in the last year</text>{fade(0.10)}</g>
+<text x="0" y="73" class="muted" font-size="12">contributions in the last year</text>{fade(0.20, 0.70)}</g>
 <g opacity="0"><text x="{WIDTH}" y="32" class="ink" text-anchor="end" font-size="18" font-weight="700">{active}</text>
-<text x="{WIDTH}" y="50" class="muted" text-anchor="end" font-size="11">active days</text>{fade(0.24)}</g>
+<text x="{WIDTH}" y="50" class="muted" text-anchor="end" font-size="11">active days</text>{fade(0.48, 0.70)}</g>
 {chart_clip}<g clip-path="url(#contributions-chart)">
 <polyline points="{' '.join(points)}" fill="none" class="ink" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
 <line x1="0" y1="128" x2="{WIDTH}" y2="128" class="line" /></g>{chart_cursor}
@@ -168,11 +168,11 @@ def draw_languages(repositories: list[dict]) -> str:
     for index, (language, size) in enumerate(ranked):
         y = 34 + index * 25
         percentage = size / sum(sizes.values()) * 100 if sizes else 0
-        delay = 0.25 + index * 0.10
+        delay = 0.50 + index * 0.20
         bar_width = 420 * size / maximum
-        rows.append(f'<g opacity="0"><text x="0" y="{y}" class="ink" font-size="12">{html.escape(language.lower())}</text><text x="{WIDTH}" y="{y}" class="muted" text-anchor="end" font-size="11">{percentage:.0f}%</text>{fade(delay)}</g>')
-        rows.append(f'<rect x="112" y="{y - 10}" width="0" height="8" rx="4" class="ink" opacity=".8"><animate attributeName="width" from="0" to="{bar_width:.1f}" begin="{delay:.2f}s" dur=".70s" fill="freeze" /></rect>')
-    return svg(WIDTH, 168, '<g opacity="0"><text x="0" y="12" class="muted" font-size="10" letter-spacing="1.2">TOP LANGUAGES BY BYTES</text>' + fade(0.08) + '</g>' + "".join(rows))
+        rows.append(f'<g opacity="0"><text x="0" y="{y}" class="ink" font-size="12">{html.escape(language.lower())}</text><text x="{WIDTH}" y="{y}" class="muted" text-anchor="end" font-size="11">{percentage:.0f}%</text>{fade(delay, 0.70)}</g>')
+        rows.append(f'<rect x="112" y="{y - 10}" width="0" height="8" rx="4" class="ink" opacity=".8"><animate attributeName="width" from="0" to="{bar_width:.1f}" begin="{delay:.2f}s" dur="1.40s" fill="freeze" /></rect>')
+    return svg(WIDTH, 168, '<g opacity="0"><text x="0" y="12" class="muted" font-size="10" letter-spacing="1.2">TOP LANGUAGES BY BYTES</text>' + fade(0.16, 0.70) + '</g>' + "".join(rows))
 
 
 def draw_year(calendar: dict) -> str:
@@ -182,9 +182,9 @@ def draw_year(calendar: dict) -> str:
         count = day["contributionCount"]
         opacity = 0.12 if count == 0 else min(0.25 + count * 0.12, 1)
         x, y = (index % 53) * 11 + 20, (index // 53) * 12 + 34
-        delay = 0.28 + (index // 53) * 0.10 + (index % 53) * 0.012
-        cells.append(f'<rect x="{x}" y="{y}" width="8" height="8" rx="2" class="ink" opacity="0"><title>{day["date"]}: {count} contributions</title><animate attributeName="opacity" from="0" to="{opacity:.2f}" begin="{delay:.2f}s" dur=".18s" fill="freeze" /></rect>')
-    return svg(WIDTH, 132, f'<g opacity="0"><text x="20" y="16" class="muted" font-size="10" letter-spacing="1.2">THE YEAR · {calendar["totalContributions"]} CONTRIBUTIONS</text>{fade(0.08)}</g>{"".join(cells)}')
+        delay = 0.56 + (index // 53) * 0.20 + (index % 53) * 0.024
+        cells.append(f'<rect x="{x}" y="{y}" width="8" height="8" rx="2" class="ink" opacity="0"><title>{day["date"]}: {count} contributions</title><animate attributeName="opacity" from="0" to="{opacity:.2f}" begin="{delay:.2f}s" dur=".36s" fill="freeze" /></rect>')
+    return svg(WIDTH, 132, f'<g opacity="0"><text x="20" y="16" class="muted" font-size="10" letter-spacing="1.2">THE YEAR · {calendar["totalContributions"]} CONTRIBUTIONS</text>{fade(0.16, 0.70)}</g>{"".join(cells)}')
 
 
 def main() -> None:
