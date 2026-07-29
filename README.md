@@ -12,7 +12,7 @@
 
 <img src="./heading-stack.svg" width="620" alt="stack" />
 
-<samp>python &nbsp; java &nbsp; kotlin &nbsp; javascript/react &nbsp; fastapi &nbsp; docker &nbsp; git &nbsp; android studio &nbsp; sql</samp>
+<samp>python &nbsp; java &nbsp; kotlin &nbsp; javascript/react &nbsp; fastapi &nbsp; docker &nbsp; git &nbsp; html &nbsp; chrome extensions &nbsp; android studio &nbsp; sql</samp>
 
 <img src="./heading-projects.svg" width="620" alt="projects" />
 
