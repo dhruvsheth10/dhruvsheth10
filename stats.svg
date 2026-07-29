@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="148" viewBox="0 0 620 148" role="img">
+<style>
+  text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  .ink { fill: #57606a; } .muted { fill: #8c959f; } .line { stroke: #d0d7de; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #c9d1d9; } .muted { fill: #8b949e; } .line { stroke: #30363d; }
+  }
+</style>
+<text x="0" y="52" class="ink" font-size="48" font-weight="700">464</text>
+<text x="0" y="73" class="muted" font-size="12">contributions in the last year</text>
+<text x="620" y="32" class="ink" text-anchor="end" font-size="18" font-weight="700">85</text>
+<text x="620" y="50" class="muted" text-anchor="end" font-size="11">active days</text>
+<polyline points="0.0,128.0 11.9,128.0 23.8,128.0 35.8,128.0 47.7,128.0 59.6,128.0 71.5,128.0 83.5,128.0 95.4,128.0 107.3,128.0 119.2,128.0 131.2,128.0 143.1,122.0 155.0,116.1 166.9,111.2 178.8,120.4 190.8,113.3 202.7,128.0 214.6,128.0 226.5,128.0 238.5,128.0 250.4,126.4 262.3,127.5 274.2,117.1 286.2,112.3 298.1,128.0 310.0,127.5 321.9,128.0 333.8,116.1 345.8,110.1 357.7,117.7 369.6,123.7 381.5,122.6 393.5,119.3 405.4,127.5 417.3,123.1 429.2,90.0 441.2,110.1 453.1,124.7 465.0,109.5 476.9,126.4 488.8,123.1 500.8,126.9 512.7,123.1 524.6,123.7 536.5,126.4 548.5,126.4 560.4,126.9 572.3,126.4 584.2,128.0 596.2,126.9 608.1,128.0 620.0,128.0" fill="none" stroke="currentColor" class="ink" stroke-width="2" stroke-linejoin="round" />
+<line x1="0" y1="128" x2="620" y2="128" class="line" />
+</svg>

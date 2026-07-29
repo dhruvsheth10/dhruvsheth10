@@ -1,0 +1,36 @@
+name: Refresh profile graphics
+
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-profile-graphics
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Generate profile graphics
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_LOGIN: ${{ github.repository_owner }}
+        run: python3 scripts/generate_stats.py
+
+      - name: Commit changed graphics
+        run: |
+          if [ -z "$(git status --porcelain -- '*.svg')" ]; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.svg'
+          git commit -m "chore: refresh profile graphics"
+          git push

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="86" viewBox="0 0 620 86" role="img">
+<style>
+  text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  .ink { fill: #57606a; } .muted { fill: #8c959f; } .line { stroke: #d0d7de; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill: #c9d1d9; } .muted { fill: #8b949e; } .line { stroke: #30363d; }
+  }
+</style><text x="310" y="51" class="ink" text-anchor="middle" font-size="34" font-weight="700" letter-spacing="4"><tspan opacity="0">H<set attributeName="opacity" to="1" begin="0.00s" fill="freeze"/></tspan><tspan opacity="0">E<set attributeName="opacity" to="1" begin="0.12s" fill="freeze"/></tspan><tspan opacity="0">L<set attributeName="opacity" to="1" begin="0.24s" fill="freeze"/></tspan><tspan opacity="0">L<set attributeName="opacity" to="1" begin="0.36s" fill="freeze"/></tspan><tspan opacity="0">O<set attributeName="opacity" to="1" begin="0.48s" fill="freeze"/></tspan><tspan opacity="0">&#160;<set attributeName="opacity" to="1" begin="0.60s" fill="freeze"/></tspan><tspan opacity="0">W<set attributeName="opacity" to="1" begin="0.72s" fill="freeze"/></tspan><tspan opacity="0">O<set attributeName="opacity" to="1" begin="0.84s" fill="freeze"/></tspan><tspan opacity="0">R<set attributeName="opacity" to="1" begin="0.96s" fill="freeze"/></tspan><tspan opacity="0">L<set attributeName="opacity" to="1" begin="1.08s" fill="freeze"/></tspan><tspan opacity="0">D<set attributeName="opacity" to="1" begin="1.20s" fill="freeze"/></tspan></text></svg>
