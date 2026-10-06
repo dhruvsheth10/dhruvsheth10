@@ -8,7 +8,7 @@
 
 <img src="./heading-about.svg" width="620" alt="about" />
 
-> Student at MSJHS.
+> Student.
 
 <img src="./heading-stack.svg" width="620" alt="stack" />
 
