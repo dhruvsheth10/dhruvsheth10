@@ -6,11 +6,11 @@
     .ink { fill: #c9d1d9; color: #c9d1d9; } .muted { fill: #8b949e; } .line { stroke: #30363d; }
   }
 </style>
-<g opacity="0"><text x="0" y="52" class="ink" font-size="48" font-weight="700">485</text>
+<g opacity="0"><text x="0" y="52" class="ink" font-size="48" font-weight="700">479</text>
 <text x="0" y="73" class="muted" font-size="12">contributions in the last year</text><animate attributeName="opacity" from="0" to="1" begin="0.20s" dur="0.70s" fill="freeze" /></g>
-<g opacity="0"><text x="620" y="32" class="ink" text-anchor="end" font-size="18" font-weight="700">94</text>
+<g opacity="0"><text x="620" y="32" class="ink" text-anchor="end" font-size="18" font-weight="700">93</text>
 <text x="620" y="50" class="muted" text-anchor="end" font-size="11">active days</text><animate attributeName="opacity" from="0" to="1" begin="0.48s" dur="0.70s" fill="freeze" /></g>
 <clipPath id="contributions-chart"><rect x="0.0" y="84.0" width="0" height="46.0"><animate attributeName="width" from="0" to="620.0" begin="0.84s" dur="2.50s" fill="freeze" /></rect></clipPath><g clip-path="url(#contributions-chart)">
-<polyline points="0.0,122.0 11.9,116.1 23.8,111.2 35.8,120.9 47.7,113.3 59.6,128.0 71.5,128.0 83.5,128.0 95.4,128.0 107.3,126.4 119.2,127.5 131.2,117.1 143.1,112.3 155.0,128.0 166.9,127.5 178.8,128.0 190.8,116.1 202.7,110.1 214.6,117.7 226.5,123.7 238.5,122.6 250.4,119.3 262.3,127.5 274.2,123.1 286.2,90.0 298.1,110.1 310.0,124.7 321.9,109.5 333.8,126.4 345.8,123.1 357.7,127.5 369.6,123.7 381.5,124.2 393.5,126.4 405.4,126.9 417.3,126.9 429.2,126.4 441.2,128.0 453.1,127.5 465.0,128.0 476.9,119.3 488.8,126.9 500.8,126.9 512.7,128.0 524.6,128.0 536.5,128.0 548.5,128.0 560.4,128.0 572.3,128.0 584.2,128.0 596.2,124.2 608.1,128.0 620.0,128.0" fill="none" class="ink" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+<polyline points="0.0,125.3 11.9,116.1 23.8,111.2 35.8,120.9 47.7,113.3 59.6,128.0 71.5,128.0 83.5,128.0 95.4,128.0 107.3,126.4 119.2,127.5 131.2,117.1 143.1,112.3 155.0,128.0 166.9,127.5 178.8,128.0 190.8,116.1 202.7,110.1 214.6,117.7 226.5,123.7 238.5,122.6 250.4,119.3 262.3,127.5 274.2,123.1 286.2,90.0 298.1,110.1 310.0,124.7 321.9,109.5 333.8,126.4 345.8,123.1 357.7,127.5 369.6,123.7 381.5,124.2 393.5,126.4 405.4,126.9 417.3,126.9 429.2,126.4 441.2,128.0 453.1,127.5 465.0,128.0 476.9,119.3 488.8,126.9 500.8,126.9 512.7,128.0 524.6,128.0 536.5,128.0 548.5,128.0 560.4,128.0 572.3,128.0 584.2,128.0 596.2,124.2 608.1,128.0 620.0,128.0" fill="none" class="ink" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
 <line x1="0" y1="128" x2="620" y2="128" class="line" /></g><rect y="84.0" width="2" height="46.0" class="ink" opacity="0"><animate attributeName="x" from="0.0" to="620.0" begin="0.84s" dur="2.50s" fill="freeze" /><set attributeName="opacity" to=".55" begin="0.84s" /><set attributeName="opacity" to="0" begin="3.34s" /></rect>
 </svg>
